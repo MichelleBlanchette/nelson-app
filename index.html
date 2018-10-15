@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nelson Rule Verifier</title>
+	
+	<link href="css/main.css" rel="stylesheet" type="text/css" />
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	
+	<header class="bg-primary">
+		<div id="logo" class="black">
+			<img src="images/nelson-rule_app-icon.png" alt="Nelson Rule Verifier App Icon" />
+			<p>Control Chart Grapher &amp;<br /><span>Nelson Rule Verifier</span></p>
+		</div>
+		<div id="signature" class="bg-dark">
+			<img src="images/nelson-rule_michelle-blanchette_logo.png" alt="Michelle Blanchette Logo" />
+			<div id="author" class="primary">
+				<p id="name">Michelle<br />Blanchette</p>
+				<p id="website"><a href="https://www.michellegraphics.com/index.html" target="_blank">michellegraphics.com</a></p>
+			</div>
+		</div>
+	</header>
+	
+	<!--*************************************************************************-->
+	
+	<div id="control-panel" class="bg-dark primary">
+		<nav class="bg-black">
+			<ul>
+				<li class="current error">Data</li>
+				<li>Rules</li>
+				<li>Settings</li>
+			</ul>
+		</nav>
+		
+		<!--DATA TAB's CONTENT-->
+		<div id="data-pane" class="pane">
+			<p class="note white">Use the input field below to add values to the data list. Click the minus sign (&thinsp;&ndash;&thinsp;) to remove values from the data list, or click the plus sign (&thinsp;+&thinsp;) where data should be inserted. Refer to the SETTINGS pane to change data formatting and more.</p>
+			<h1>Submitted Data</h1>
+			<p id="no-data" class="note secondary">The data list is empty.</p>
+			<ol id="data-list">
+				<!--PHP loop through GET data and add <li>'s-->
+<!--
+				<li>135.683<button>&ndash;</button></li>
+				<div class="insert-button-group"><button>+</button><hr /></div>
+				<li>5.492<button>&ndash;</button></li>
+				<div class="hide"><button>+</button><hr /></div>
+				<div class="input-group insert-input-group"><input type="text" /><button class="data-insert">Insert</button></div>
+				<li>97.348<button>&ndash;</button></li>
+-->
+			</ol>
+			<div id="data-append-button" class="insert-button-group hide"><button>+</button><hr /></div>
+			<div id="input-add-group" class="input-group">
+				<input id="data-input" type="text" maxlength="25" /><button id="data-add">Add</button>
+			</div>
+			<p id="unmet-condition" class="note error">*At least 15 values must be entered before processing.</p>
+		</div>
+		
+		<!--RULES TAB's CONTENT-->
+		<div id="rules-pane" class="pane hide">
+			<!----------->
+			<h1><i class="material-icons inactive">visibility_off</i> Rule 1: <span class="rule-status"></span><span class="drop-arrow closed">&#9662;</span></h1>
+			<div class="drop-content hide">
+				<p class="note white">One point is more than 3 standard deviations from the mean.</p>
+				<p class="note error hide">One sample is grossly out of control.</p>
+				<ul class="error-data hide"></ul>
+			</div>
+			<!----------->
+			<h1><i class="material-icons inactive">visibility_off</i> Rule 2: <span class="rule-status"></span><span class="drop-arrow closed">&#9662;</span></h1>
+			<div class="drop-content hide">
+				<p class="note white">Nine (or more) points in a row are on the same side of the mean.</p>
+				<p class="note error hide">Some prolonged bias exists.</p>
+				<ul class="error-data hide"></ul>
+			</div>
+			<!----------->
+			<h1><i class="material-icons inactive">visibility_off</i> Rule 3: <span class="rule-status"></span><span class="drop-arrow closed">&#9662;</span></h1>
+			<div class="drop-content hide">
+				<p class="note white">Six (or more) points in a row are continually increasing (or decreasing).</p>
+				<p class="note error hide">A trend exists.</p>
+				<ul class="error-data hide"></ul>
+			</div>
+			<!----------->
+			<h1><i class="material-icons inactive">visibility_off</i> Rule 4: <span class="rule-status"></span><span class="drop-arrow closed">&#9662;</span></h1>
+			<div class="drop-content hide">
+				<p class="note white">Fourteen (or more) points in a row alternate in direction (oscillate).</p>
+				<p class="note error hide">This much oscillation is beyond noise.</p>
+				<ul class="error-data hide"></ul>
+			</div>
+			<!----------->
+			<h1><i class="material-icons inactive">visibility_off</i> Rule 5: <span class="rule-status"></span><span class="drop-arrow closed">&#9662;</span></h1>
+			<div class="drop-content hide">
+				<p class="note white">Two (or three) out of three points in a row are more than 2 standard deviations from the mean in the same direction.</p>
+				<p class="note error hide">There is a medium tendency for samples to be mediumly out of control.</p>
+				<ul class="error-data hide"></ul>
+			</div>
+			<!----------->
+			<h1><i class="material-icons inactive">visibility_off</i> Rule 6: <span class="rule-status"></span><span class="drop-arrow closed">&#9662;</span></h1>
+			<div class="drop-content hide">
+				<p class="note white">Four (or five) out of five points in a row are more than 1 standard deviation from the mean in the same direction.</p>
+				<p class="note error hide">There is a strong tendency for samples to be slightly out of control.</p>
+				<ul class="error-data hide"></ul>
+			</div>
+			<!----------->
+			<h1><i class="material-icons inactive">visibility_off</i> Rule 7: <span class="rule-status"></span><span class="drop-arrow closed">&#9662;</span></h1>
+			<div class="drop-content hide">
+				<p class="note white">Fifteen points in a row are all within 1 standard deviation of the mean on either side of the mean.</p>
+				<p class="note error hide">With 1 standard deviation, greater variation would be expected.</p>
+				<ul class="error-data hide"></ul>
+			</div>
+			<!----------->
+			<h1><i class="material-icons inactive">visibility_off</i> Rule 8: <span class="rule-status"></span><span class="drop-arrow closed">&#9662;</span></h1>
+			<div class="drop-content hide">
+				<p class="note white">Eight points in a row exist, but none within 1 standard deviation of the mean, and the points are in both directions from the mean.</p>
+				<p class="note error hide">Jumping from above to below whilst missing the first standard deviation band is rarely random.</p>
+				<ul class="error-data hide"></ul>
+			</div>
+			<!----------->
+		</div>
+		
+		<!--RULES TAB's CONTENT-->
+		<div id="rules-pane" class="pane hide">
+			<h3>Lists of Settings will Go Here!</h3>
+		</div>
+	</div>
+	
+	<!----------------------------------------------------------------------------->
+	
+	<div id="chart-panel" class="bg-white">
+		<svg id="guide-labels"></svg>
+		<svg id="control-chart">
+			<g id="chart-guides"></g>
+			<g id="chart-line"></g>
+			<g id="chart-nodes"></g>
+			I'm sorry. Your browser does not support inline SVG. Control Charting is unavailable, but you may still review data feedback in the Rules pane.
+		</svg>
+	</div>
+	
+	<div class="clearfloat"></div>
+	
+	<!--*************************************************************************-->
+	
+	<footer>
+		<div class="bg-white"></div>
+		<div class="bg-success"></div>
+		<div id="copyright" class="bg-primary white"><p>&copy;&thinsp;2018 <span>Michelle Blanchette</span></p></div>
+		<div class="bg-secondary"></div>
+		<div class="bg-error"></div>
+	</footer>
+	
+	<!--*************************************************************************-->
+	
+	<script src="js/interaction_data-pane.js" type="text/javascript"></script>
+	<script src="js/interaction_rules-pane.js" type="text/javascript"></script>
+	<script src="js/canvas-drawing.js" type="text/javascript"></script>
+	<script src="js/nelson-verify.js" type="text/javascript"></script>
+	
+</body>
+</html>
