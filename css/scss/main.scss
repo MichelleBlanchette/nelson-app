@@ -148,7 +148,7 @@ button {
 	border-radius: 4px;
 	padding-top: 3px;
 }
-button:focus, button:active {
+button:active {
 	border-bottom: none;
 	bottom: 0;
 }
@@ -308,7 +308,7 @@ header {
 				border-top: 2px solid $primary;
 				bottom: 4px;
 			}
-			button:focus, button:active {
+			button:active {
 				border-top: 7px solid $secondary;
 				background-color: $secondary;
 				bottom: -1px;
@@ -342,7 +342,7 @@ header {
 				left: 47%;
 				display: none;
 			}
-			button:focus, button:active {
+			button:active {
 				border: none;
 				bottom: -8px;
 				background-color: $white;

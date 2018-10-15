@@ -189,7 +189,7 @@ button {
   padding-top: 3px; }
 
 /* line 151, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
-button:focus, button:active {
+button:active {
   border-bottom: none;
   bottom: 0; }
 
@@ -353,7 +353,7 @@ header {
       border-top: 2px solid #0676b7;
       bottom: 4px; }
     /* line 311, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
-    #control-panel #data-pane div.input-group button:focus, #control-panel #data-pane div.input-group button:active {
+    #control-panel #data-pane div.input-group button:active {
       border-top: 7px solid #035094;
       background-color: #035094;
       bottom: -1px; }
@@ -387,7 +387,7 @@ header {
       left: 47%;
       display: none; }
     /* line 345, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
-    #control-panel #data-pane div.insert-button-group button:focus, #control-panel #data-pane div.insert-button-group button:active {
+    #control-panel #data-pane div.insert-button-group button:active {
       border: none;
       bottom: -8px;
       background-color: #e8e9ec; }
