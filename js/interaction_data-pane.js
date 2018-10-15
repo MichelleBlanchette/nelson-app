@@ -38,6 +38,11 @@ function showPane(num) {
 inputAddField.addEventListener('keypress', function(e){
 	cleanNumericalInput(e, this);
 });
+//disable paste functionality
+inputAddField.addEventListener('paste', function(e){
+	e.preventDefault();
+});
+
 function cleanNumericalInput(event, theField) {
 	var theButton = theField.nextSibling;
 	if (event.key === 'Enter') {
@@ -201,8 +206,13 @@ function addDataValue(isAppended, associatedInputField) {
 			addDataValue(false, insertFieldGroup.querySelector('input'));
 			graphData();
 		});
+		//data sanitization
 		insertFieldGroup.querySelector('input').addEventListener('keypress', function(e){
 			cleanNumericalInput(e, this);
+		});
+		//disable paste functionality
+		insertFieldGroup.querySelector('input').addEventListener('paste', function(e){
+			e.preventDefault();
 		});
 		//******************************
 	}
