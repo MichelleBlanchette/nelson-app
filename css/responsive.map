@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "scss/responsive.css",
+	"sources": [
+		"scss/responsive.scss"
+	],
+	"sourcesContent": [
+		"// Large devices (desktops, less than 1200px)\n@media (max-width: 1300px) {\n\t\n\t#control-panel nav ul li {\n\t\tfont-size: 1.1vw;\n\t}\n\t\n\t.pane h1 {\n\t\tfont-size: 1.5em;\n\t}\n\t\n\t#control-panel #data-pane ol#data-list li {\n\t\tfont-size: 1.3vw;\n\t}\n\t\n\t#control-panel #data-pane div.input-group button {\n\t\tbottom: 0.13vw;\n\t}\n\t\n\t#control-panel #data-pane ol#data-list li button {\n\t\tbottom: 0.22vw;\n\t\tpadding: 0.15vw 0.65vw 0.15vw 0.5vw;\n\t\tfont-size: 1.41vw;\n\t}\n\t\n\t#control-panel #data-pane div.insert-button-group button {\n\t\tfont-size: 1.5vw;\n\t\tpadding: 0.8vw;\n\t\tbottom: -2px;\n\t}\n\t\n\t#chart-panel #guide-labels {\n\t\twidth: 13%;\n\t}\n\t\n\t#chart-panel #guide-labels text {\n\t\tfont-size: 1.2vm !important;\n\t}\n\t\n\t#chart-panel #control-chart {\n\t\twidth: 87%;\n\t}\n\t\n\tfooter #copyright p {\n\t\tfont-size: 0.7vw;\n\t}\n\t\n\theader #signature #author {\n\t\twidth: 7.7vw;\n\t}\n\t\n\theader #signature #author:hover {\n\t\twidth: 15.7vw;\n\t}\n\t\n\theader #signature #author #name {\n\t\tfont-size: 0.9vw;\n\t\ttop: 0.6vh;\n\t}\n\t\n\theader #signature #author #website {\n\t\tfont-size: 1vw;\n\t}\n\t\n}"
+	],
+	"mappings": "AACA,MAAM,EAAL,SAAS,EAAE,MAAM;;EAEjB,AAAsB,cAAR,CAAC,GAAG,CAAC,EAAE,CAAC,EAAE,CAAC;IACxB,SAAS,EAAE,KAAM,GACjB;;EAED,AAAM,KAAD,CAAC,EAAE,CAAC;IACR,SAAS,EAAE,KAAM,GACjB;;EAED,AAAuC,cAAzB,CAAC,UAAU,CAAC,EAAE,AAAA,UAAU,CAAC,EAAE,CAAC;IACzC,SAAS,EAAE,KAAM,GACjB;;EAED,AAA0C,cAA5B,CAAC,UAAU,CAAC,GAAG,AAAA,YAAY,CAAC,MAAM,CAAC;IAChD,MAAM,EAAE,MAAO,GACf;;EAED,AAA0C,cAA5B,CAAC,UAAU,CAAC,EAAE,AAAA,UAAU,CAAC,EAAE,CAAC,MAAM,CAAC;IAChD,MAAM,EAAE,MAAO;IACf,OAAO,EAAE,0BAA2B;IACpC,SAAS,EAAE,MAAO,GAClB;;EAED,AAAkD,cAApC,CAAC,UAAU,CAAC,GAAG,AAAA,oBAAoB,CAAC,MAAM,CAAC;IACxD,SAAS,EAAE,KAAM;IACjB,OAAO,EAAE,KAAM;IACf,MAAM,EAAE,IAAK,GACb;;EAED,AAAa,YAAD,CAAC,aAAa,CAAC;IAC1B,KAAK,EAAE,GAAI,GACX;;EAED,AAA2B,YAAf,CAAC,aAAa,CAAC,IAAI,CAAC;IAC/B,SAAS,EAAE,gBAAiB,GAC5B;;EAED,AAAa,YAAD,CAAC,cAAc,CAAC;IAC3B,KAAK,EAAE,GAAI,GACX;;EAED,AAAkB,MAAZ,CAAC,UAAU,CAAC,CAAC,CAAC;IACnB,SAAS,EAAE,KAAM,GACjB;;EAED,AAAkB,MAAZ,CAAC,UAAU,CAAC,OAAO,CAAC;IACzB,KAAK,EAAE,KAAM,GACb;;EAED,AAAyB,MAAnB,CAAC,UAAU,CAAC,OAAO,AAAA,MAAM,CAAC;IAC/B,KAAK,EAAE,MAAO,GACd;;EAED,AAA0B,MAApB,CAAC,UAAU,CAAC,OAAO,CAAC,KAAK,CAAC;IAC/B,SAAS,EAAE,KAAM;IACjB,GAAG,EAAE,KAAM,GACX;;EAED,AAA0B,MAApB,CAAC,UAAU,CAAC,OAAO,CAAC,QAAQ,CAAC;IAClC,SAAS,EAAE,GAAI,GACf",
+	"names": []
+}
