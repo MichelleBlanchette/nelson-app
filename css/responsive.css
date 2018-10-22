@@ -47,4 +47,21 @@
   header #signature #author #website {
     font-size: 1vw; } }
 
+@media (max-width: 991.98px) {
+  /* line 70, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/responsive.scss */
+  .mobile-only {
+    display: block !important; }
+  /* line 74, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/responsive.scss */
+  #drawer-toggle {
+    display: block !important;
+    float: left;
+    padding: 0;
+    height: 87.5vh;
+    width: 22px;
+    bottom: 0;
+    border-radius: 0; }
+  /* line 84, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/responsive.scss */
+  #chart-panel {
+    width: calc(75% - 22px); } }
+
 /*# sourceMappingURL=../responsive.map */

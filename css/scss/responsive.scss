@@ -1,4 +1,4 @@
-// Large devices (desktops, less than 1200px)
+// Large devices (laptops and desktops)
 @media (max-width: 1300px) {
 	
 	#control-panel nav ul li {
@@ -61,5 +61,30 @@
 	header #signature #author #website {
 		font-size: 1vw;
 	}
+	
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+	
+	.mobile-only {
+		display: block !important;
+	}
+	
+	#drawer-toggle {
+		display: block !important;
+		float: left;
+		padding: 0;
+		height: 87.5vh;
+		width: 22px;
+		bottom: 0;
+		border-radius: 0;
+	}
+	
+	#chart-panel {
+		width: calc(75% - 22px);
+	}
+	
+	
 	
 }

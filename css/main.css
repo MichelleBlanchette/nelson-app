@@ -133,7 +133,7 @@ a, a:link, a:focus, a:visited, a:hover {
   color: inherit; }
 
 /* line 104, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
-.hide {
+.hide, .mobile-only {
   display: none; }
 
 /* line 108, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
