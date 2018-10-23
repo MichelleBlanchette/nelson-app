@@ -79,6 +79,7 @@ body {
 	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
+	overflow: hidden;
 }
 
 p {
@@ -508,6 +509,7 @@ footer {
 			text-align: center;
 			line-height: 3vh;
 			font-size: 1vh;
+			height: inherit;
 		}
 		span {
 			text-transform: capitalize;
