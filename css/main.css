@@ -498,21 +498,22 @@ header {
     height: calc(87.5vh - 300px);
     padding: 150px 0;
     background-color: #d6d7da;
-    float: left; }
-  /* line 461, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+    float: left;
+    font-size: 1.2vm; }
+  /* line 462, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
   #chart-panel #control-chart {
     width: 80%;
     height: calc(87.5vh - 300px);
     padding: 150px 0;
     background-color: #e8e9ec;
     float: left; }
-    /* line 469, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+    /* line 470, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
     #chart-panel #control-chart #chart-nodes circle {
       fill: #0676b7; }
-    /* line 472, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+    /* line 473, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
     #chart-panel #control-chart #chart-nodes circle.error {
       fill: #d9364c; }
-    /* line 475, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+    /* line 476, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
     #chart-panel #control-chart #chart-nodes circle.pulse {
       fill: #e8e9ec;
       fill-opacity: 0;
@@ -530,19 +531,19 @@ header {
     stroke-opacity: 0; } }
 
 /**** FOOTER ****/
-/* line 500, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+/* line 501, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
 footer div {
   height: 3vh;
   width: 20%;
   float: left; }
 
-/* line 506, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+/* line 507, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
 footer #copyright p {
   text-align: center;
   line-height: 3vh;
   font-size: 1vh; }
 
-/* line 511, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+/* line 512, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
 footer #copyright span {
   text-transform: capitalize;
   font-weight: 400; }
@@ -576,7 +577,7 @@ footer #copyright span {
     width: 13%; }
   /* line 36, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
   #chart-panel #guide-labels text {
-    font-size: 1.2vw !important; }
+    font-size: 1.2vw; }
   /* line 40, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
   #chart-panel #control-chart {
     width: 82%; }
@@ -638,22 +639,37 @@ footer #copyright span {
   #control-panel.open {
     left: 0; }
   /* line 119, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
-  #chart-panel #guide-labels {
-    width: 20%; }
-  /* line 123, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
   #chart-panel #control-chart {
     width: 75%; }
-  /* line 127, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
+  /* line 123, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
   #chart-panel {
     position: absolute;
     left: 30px;
     width: calc(100% - 30px);
     z-index: 2;
-    transition: left 1s; }
-  /* line 135, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
+    transition: left 1s;
+    overflow-x: scroll;
+    overflow-y: hidden; }
+  /* line 133, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
+  #chart-panel svg {
+    height: calc(87.5vh - 300px - 16px); }
+  /* line 137, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
+  #chart-panel #guide-labels {
+    position: fixed;
+    width: 150px;
+    z-index: 4; }
+  /* line 143, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
+  #chart-panel #control-chart {
+    width: 200%;
+    position: absolute;
+    left: 150px; }
+  /* line 149, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
   #chart-panel.open {
     left: calc(70% + 30px); }
-  /* line 139, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
+  /* line 153, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
+  #chart-panel #guide-labels text {
+    font-size: 17px; }
+  /* line 157, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
   footer {
     position: absolute;
     bottom: 0;

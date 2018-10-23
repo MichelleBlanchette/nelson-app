@@ -34,7 +34,7 @@
 	}
 	
 	#chart-panel #guide-labels text {
-		font-size: 1.2vw !important;
+		font-size: 1.2vw;
 	}
 	
 	#chart-panel #control-chart {
@@ -116,10 +116,6 @@ $slide-left: left 1s;
 		left: 0;
 	}
 	
-	#chart-panel #guide-labels {
-		width: 20%;
-	}
-	
 	#chart-panel #control-chart {
 		width: 75%;
 	}
@@ -130,10 +126,32 @@ $slide-left: left 1s;
 		width: calc(100% - 30px);
 		z-index: 2;
 		transition: $slide-left;
+		overflow-x: scroll;
+    	overflow-y: hidden;
+	}
+	
+	#chart-panel svg {
+		height: calc(87.5vh - 300px - 16px);
+	}
+	
+	#chart-panel #guide-labels {
+		position: fixed;
+		width: 150px;
+		z-index: 4;
+	}
+	
+	#chart-panel #control-chart {
+		width: 200%;
+		position: absolute;
+		left: 150px;
 	}
 	
 	#chart-panel.open {
 		left: calc(70% + 30px);
+	}
+	
+	#chart-panel #guide-labels text {
+		font-size: 17px;
 	}
 	
 	footer {
