@@ -228,14 +228,17 @@ header {
     top: 0;
     height: 4vh;
     padding: 2.75vh 2.5% 2.75vh 4%;
-    -webkit-clip-path: polygon(8% 0%, 100% 0, 100% 100%, 0 100%);
-    clip-path: polygon(8% 0%, 100% 0, 100% 100%, 0 100%); }
+    -webkit-clip-path: polygon(12% 0%, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(12% 0%, 100% 0, 100% 100%, 0 100%); }
     /* line 189, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
-    header #signature img {
+    header #signature > a {
       height: inherit;
       float: left;
       margin-right: 0.6vw; }
-    /* line 194, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+      /* line 193, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+      header #signature > a img {
+        height: inherit; }
+    /* line 197, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
     header #signature #author {
       position: relative;
       height: inherit;
@@ -244,74 +247,74 @@ header {
       float: left;
       width: 5.5vw;
       transition: 0.7s; }
-      /* line 202, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+      /* line 205, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
       header #signature #author #name {
         position: absolute;
         top: 0.75vh;
         height: inherit;
         font-size: 0.7vw;
         transition: 0.7s; }
-      /* line 209, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+      /* line 212, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
       header #signature #author #website {
         position: absolute;
         top: 5vh;
         height: inherit;
         font-size: 0.8vw;
         transition: 0.7s; }
-    /* line 217, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+    /* line 220, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
     header #signature #author:hover {
       width: 12vw;
       transition: 0.3s; }
-      /* line 220, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+      /* line 223, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
       header #signature #author:hover #name {
         top: -5vh;
         transition: 0.3s; }
-      /* line 224, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+      /* line 227, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
       header #signature #author:hover #website {
         top: 1.3vh;
         transition: 0.3s; }
 
 /**** LEFT CONTROL PANEL ****/
-/* line 233, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+/* line 236, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
 ::-webkit-scrollbar {
   width: 15px;
   border-right: 3px solid #071422; }
 
-/* line 237, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+/* line 240, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
 ::-webkit-scrollbar-track {
   background: #071422; }
 
-/* line 240, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+/* line 243, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
 ::-webkit-scrollbar-thumb {
   -webkit-box-shadow: inset 0 0 6px rgba(21, 35, 53, 0.4);
   background: #035094; }
 
-/* line 244, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+/* line 247, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
 ::-webkit-scrollbar-thumb:hover {
   -webkit-box-shadow: inset 0 0 6px rgba(3, 80, 148, 0.5);
   background: #0676b7; }
 
-/* line 249, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+/* line 252, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
 #control-panel {
   height: 87.5vh;
   float: left;
   width: 25%;
   overflow-y: auto;
   overflow-x: hidden; }
-  /* line 255, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+  /* line 258, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
   #control-panel nav {
     padding: 0;
     margin: 0;
     width: 100%;
     float: left; }
-    /* line 260, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+    /* line 263, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
     #control-panel nav ul {
       margin: 0;
       padding: 2.5% 1.25% 0;
       width: 100%;
       list-style: none;
       float: left; }
-      /* line 266, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+      /* line 269, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
       #control-panel nav ul li {
         display: inline;
         float: left;
@@ -322,30 +325,30 @@ header {
         font-size: .75vw;
         border-radius: 5px 5px 0 0;
         cursor: pointer; }
-      /* line 277, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+      /* line 280, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
       #control-panel nav ul li:hover {
         background-color: #152335;
         color: #e8e9ec; }
-      /* line 281, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+      /* line 284, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
       #control-panel nav ul li.current {
         background-color: #152335; }
-  /* line 286, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+  /* line 289, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
   #control-panel .pane {
     padding: 14% 3.5% 10%; }
-  /* line 290, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+  /* line 293, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
   #control-panel #data-pane #no-data {
     text-align: center;
     margin: 0 0 35px; }
-  /* line 294, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+  /* line 297, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
   #control-panel #data-pane div.input-group {
     width: 100%;
     height: 2vw; }
-    /* line 297, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+    /* line 300, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
     #control-panel #data-pane div.input-group input[type='text'] {
       border-radius: 10px 0 0 10px;
       padding: 0.32vw;
       width: 80%; }
-    /* line 302, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+    /* line 305, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
     #control-panel #data-pane div.input-group button {
       box-sizing: border-box;
       width: 20%;
@@ -354,17 +357,17 @@ header {
       border-radius: 0 10px 10px 0;
       border-top: 2px solid #0676b7;
       bottom: 4px; }
-    /* line 311, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+    /* line 314, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
     #control-panel #data-pane div.input-group button:active {
       border-top: 7px solid #035094;
       background-color: #035094;
       bottom: -1px; }
-  /* line 317, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+  /* line 320, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
   #control-panel #data-pane div.insert-button-group {
     height: 16px;
     position: relative;
     z-index: 1; }
-    /* line 321, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+    /* line 324, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
     #control-panel #data-pane div.insert-button-group hr {
       border: none;
       border-top: 1px dashed #e8e9ec;
@@ -372,7 +375,7 @@ header {
       position: absolute;
       z-index: 2;
       display: none; }
-    /* line 329, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+    /* line 332, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
     #control-panel #data-pane div.insert-button-group button {
       font-size: 1vw;
       font-weight: 700;
@@ -388,24 +391,24 @@ header {
       bottom: -8px;
       left: 47%;
       display: none; }
-    /* line 345, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+    /* line 348, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
     #control-panel #data-pane div.insert-button-group button:active {
       border: none;
       bottom: -8px;
       background-color: #e8e9ec; }
-  /* line 351, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+  /* line 354, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
   #control-panel #data-pane div.insert-button-group:hover button {
     display: inline; }
-  /* line 354, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+  /* line 357, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
   #control-panel #data-pane div.insert-button-group:hover hr {
     display: block; }
-  /* line 357, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+  /* line 360, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
   #control-panel #data-pane ol#data-list {
     margin: 0 0 15px;
     padding: 0;
     list-style: none;
     counter-reset: my-counter; }
-    /* line 362, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+    /* line 365, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
     #control-panel #data-pane ol#data-list li {
       font-size: 0.8vw;
       font-weight: 700;
@@ -415,7 +418,7 @@ header {
       padding-right: 0;
       border-radius: 10px;
       margin: 0; }
-      /* line 371, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+      /* line 374, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
       #control-panel #data-pane ol#data-list li button {
         border: none;
         font-size: 1vw;
@@ -427,11 +430,11 @@ header {
         bottom: 7px;
         background: none;
         color: #e8e9ec; }
-      /* line 383, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+      /* line 386, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
       #control-panel #data-pane ol#data-list li button:hover {
         color: #071422;
         background-color: #d9364c; }
-    /* line 388, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+    /* line 391, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
     #control-panel #data-pane ol#data-list li:before {
       content: counter(my-counter, decimal);
       counter-increment: my-counter;
@@ -446,54 +449,54 @@ header {
       margin-right: 1vw;
       color: #071422;
       background-color: #0676b7; }
-    /* line 403, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+    /* line 406, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
     #control-panel #data-pane ol#data-list div.input-group {
       margin: 15px 0 17px; }
-      /* line 405, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+      /* line 408, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
       #control-panel #data-pane ol#data-list div.input-group input[type='text'] {
         width: 75%; }
-      /* line 409, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+      /* line 412, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
       #control-panel #data-pane ol#data-list div.input-group button {
         width: 25%; }
-  /* line 414, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+  /* line 417, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
   #control-panel #data-pane #unmet-condition {
     text-align: center;
     margin-top: 15px;
     margin-bottom: 30px; }
-  /* line 420, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+  /* line 423, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
   #control-panel #rules-pane {
     padding: 11% 0 10%; }
-    /* line 422, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+    /* line 425, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
     #control-panel #rules-pane h1 {
       background: linear-gradient(#152335, #071422);
       padding: 10px 3.5%;
       margin: 0;
       cursor: default; }
-    /* line 428, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+    /* line 431, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
     #control-panel #rules-pane .drop-content {
       background: #071422;
       padding: 5px 3.5%; }
-      /* line 432, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+      /* line 435, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
       #control-panel #rules-pane .drop-content ul {
         list-style: none;
         padding: 0;
         margin: 20px 0; }
-        /* line 437, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+        /* line 440, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
         #control-panel #rules-pane .drop-content ul li {
           padding: 10px 0;
           font-size: 120%;
           cursor: default; }
-        /* line 442, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+        /* line 445, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
         #control-panel #rules-pane .drop-content ul li:hover, #control-panel #rules-pane .drop-content ul li:active, #control-panel #rules-pane .drop-content ul li:focus {
           color: #d9364c; }
 
 /**** RIGHT CHARTING PANEL ****/
-/* line 451, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+/* line 454, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
 #chart-panel {
   height: 87.5vh;
   float: left;
   width: 75%; }
-  /* line 455, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+  /* line 458, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
   #chart-panel #guide-labels {
     width: 10%;
     height: calc(87.5vh - 300px);
@@ -501,20 +504,20 @@ header {
     background-color: #d6d7da;
     float: left;
     font-size: 1.2vm; }
-  /* line 463, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+  /* line 466, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
   #chart-panel #control-chart {
     width: 80%;
     height: calc(87.5vh - 300px);
     padding: 150px 0;
     background-color: #e8e9ec;
     float: left; }
-    /* line 471, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+    /* line 474, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
     #chart-panel #control-chart #chart-nodes circle {
       fill: #0676b7; }
-    /* line 474, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+    /* line 477, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
     #chart-panel #control-chart #chart-nodes circle.error {
       fill: #d9364c; }
-    /* line 477, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+    /* line 480, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
     #chart-panel #control-chart #chart-nodes circle.pulse {
       fill: #e8e9ec;
       fill-opacity: 0;
@@ -532,20 +535,20 @@ header {
     stroke-opacity: 0; } }
 
 /**** FOOTER ****/
-/* line 502, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+/* line 505, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
 footer div {
   height: 3vh;
   width: 20%;
   float: left; }
 
-/* line 508, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+/* line 511, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
 footer #copyright p {
   text-align: center;
   line-height: 3vh;
   font-size: 1vh;
   height: inherit; }
 
-/* line 514, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+/* line 517, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
 footer #copyright span {
   text-transform: capitalize;
   font-weight: 400; }
@@ -605,6 +608,12 @@ footer #copyright span {
   .mobile-only {
     display: block !important; }
   /* line 77, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
+  #author {
+    display: none; }
+  /* line 81, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
+  footer span {
+    display: none; }
+  /* line 85, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
   #drawer-toggle {
     display: block !important;
     padding: 0 1px;
@@ -616,34 +625,34 @@ footer #copyright span {
     left: 0;
     top: 9.5vh;
     bottom: 0;
-    border-top: 2px solid #035094;
+    border-bottom: none;
     transition: left 1s; }
-  /* line 92, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
+  /* line 100, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
   #drawer-toggle.open {
     left: 70%;
     z-index: 4; }
-  /* line 97, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
+  /* line 105, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
   #drawer-toggle i::after {
     content: '\21E5';
     font-style: normal;
     font-size: 20px; }
-  /* line 103, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
+  /* line 111, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
   #drawer-toggle.open i::after {
     content: '\21E4'; }
-  /* line 107, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
+  /* line 115, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
   #control-panel {
     width: 70%;
     position: absolute;
     z-index: 5;
     left: -70%;
     transition: left 1s; }
-  /* line 115, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
+  /* line 123, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
   #control-panel.open {
     left: 0; }
-  /* line 119, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
+  /* line 127, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
   #chart-panel #control-chart {
     width: 75%; }
-  /* line 123, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
+  /* line 131, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
   #chart-panel {
     position: absolute;
     left: 30px;
@@ -652,26 +661,26 @@ footer #copyright span {
     transition: left 1s;
     overflow-x: scroll;
     overflow-y: hidden; }
-  /* line 133, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
+  /* line 141, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
   #chart-panel svg {
     height: calc(87.5vh - 300px - 16px); }
-  /* line 137, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
+  /* line 145, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
   #chart-panel #guide-labels {
     position: fixed;
     width: 150px;
     z-index: 4; }
-  /* line 143, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
+  /* line 151, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
   #chart-panel #control-chart {
     width: 200%;
     position: absolute;
     left: 150px; }
-  /* line 149, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
+  /* line 157, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
   #chart-panel.open {
     left: calc(70% + 30px); }
-  /* line 153, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
+  /* line 161, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
   #chart-panel #guide-labels text {
     font-size: 17px; }
-  /* line 157, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
+  /* line 165, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
   footer {
     position: absolute;
     bottom: 0;

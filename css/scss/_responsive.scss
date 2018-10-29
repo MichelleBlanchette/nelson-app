@@ -74,6 +74,14 @@ $slide-left: left 1s;
 		display: block !important;
 	}
 	
+	#author {
+		display: none;
+	}
+	
+	footer span {
+		display: none;
+	}
+	
 	#drawer-toggle {
 		display: block !important;
 		padding: 0 1px;
@@ -85,7 +93,7 @@ $slide-left: left 1s;
 		left: 0;
 		top: 9.5vh;
 		bottom: 0;
-		border-top: 2px solid $secondary;
+		border-bottom: none;
 		transition: $slide-left;
 	}
 	

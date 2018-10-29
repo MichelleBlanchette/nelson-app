@@ -184,12 +184,15 @@ header {
 		top: 0;
 		height: 4vh;
 		padding: 2.75vh 2.5% 2.75vh 4%;
-		-webkit-clip-path: polygon(8% 0%, 100% 0, 100% 100%, 0 100%);
-		clip-path: polygon(8% 0%, 100% 0, 100% 100%, 0 100%);
-		img {
+		-webkit-clip-path: polygon(12% 0%, 100% 0, 100% 100%, 0 100%);
+		clip-path: polygon(12% 0%, 100% 0, 100% 100%, 0 100%);
+		> a {
 			height: inherit;
 			float: left;
 			margin-right: 0.6vw;
+			img {
+				height: inherit;
+			}
 		}
 		#author {
 			position: relative;
