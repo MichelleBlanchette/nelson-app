@@ -18,7 +18,9 @@ $font: 'Montserrat', 'Helvetica', sans-serif;
 	font-family: 'Material Icons';
 	font-weight: normal;
 	font-style: normal;
-	font-size: 24px;  /* Preferred icon size */
+	font-size: 1em;
+	position: relative;
+	bottom: -0.1em;
 	display: inline-block;
 	line-height: 1;
 	text-transform: none;
@@ -87,6 +89,10 @@ body {
 	overflow: hidden;
 }
 
+h1 {
+	font-size: 1em;
+}
+
 p {
 	margin: 0;
 	padding: 0;
@@ -97,7 +103,7 @@ p.note {
 	font-weight: 400;
 	text-transform: none;
 	line-height: 1.5;
-	font-size: 1vw;
+	font-size: 0.64em;
 }
 
 a, a:link, a:focus, a:visited, a:hover {
@@ -280,7 +286,8 @@ header {
 				margin: 0 1.25% 0;
 				padding: 2% 0;
 				text-align: center;
-				font-size: .75vw;
+				font-size: 0.64em;
+				letter-spacing: 1px;
 				border-radius: 5px 5px 0 0;
 				cursor: pointer;
 			}
@@ -468,7 +475,7 @@ header {
 		padding: 150px 0;
 		background-color: $grey;
 		float: left;
-		font-size:1.2vm;
+		font-size: 0.64em;
 	}
 	#control-chart {
 		width: 80%;
@@ -518,7 +525,7 @@ footer {
 		p {
 			text-align: center;
 			line-height: 3vh;
-			font-size: 1vh;
+			font-size: 0.512em;
 			height: inherit;
 		}
 		span {

@@ -27,10 +27,6 @@ $slide-left: left 1s;
 
 @media (max-width: 991.98px) {
 	
-	html {
-		font-size: 0.96em;
-	}
-	
 	.mobile-only {
 		display: block !important;
 	}
@@ -150,5 +146,7 @@ $slide-left: left 1s;
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
-	
+	html {
+		font-size: 0.96em;
+	}
 }
