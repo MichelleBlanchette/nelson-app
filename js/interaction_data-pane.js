@@ -38,6 +38,11 @@ function showPane(num) {
 inputAddField.addEventListener('keypress', function(e){
 	cleanNumericalInput(e, this);
 });
+//disable paste functionality
+inputAddField.addEventListener('paste', function(e){
+	e.preventDefault();
+});
+
 function cleanNumericalInput(event, theField) {
 	var theButton = theField.nextSibling;
 	if (event.key === 'Enter') {
@@ -120,7 +125,7 @@ function addDataValue(isAppended, associatedInputField) {
 		insertNode.classList.add('insert-button-group');
 		//create insertion field
 		var insertFieldGroup = document.createElement('div');
-		insertFieldGroup.innerHTML = '<input type="text" maxlength="25" /><button class="data-insert">Insert</button>';
+		insertFieldGroup.innerHTML = '<input type="text" maxlength="10" /><button class="data-insert">Insert</button>';
 		insertFieldGroup.classList.add('input-group');
 		insertFieldGroup.classList.add('insert-input-group');
 		insertFieldGroup.classList.add('hide');
@@ -201,8 +206,13 @@ function addDataValue(isAppended, associatedInputField) {
 			addDataValue(false, insertFieldGroup.querySelector('input'));
 			graphData();
 		});
+		//data sanitization
 		insertFieldGroup.querySelector('input').addEventListener('keypress', function(e){
 			cleanNumericalInput(e, this);
+		});
+		//disable paste functionality
+		insertFieldGroup.querySelector('input').addEventListener('paste', function(e){
+			e.preventDefault();
 		});
 		//******************************
 	}
@@ -212,14 +222,14 @@ function addDataValue(isAppended, associatedInputField) {
 appendDataButton.querySelector('button').onclick = function() {
 	//show all buttons
 	var existingInsertionButtons = dataList.getElementsByClassName('insert-button-group');
-	for(var i = 0; i < existingInsertionButtons.length; i++){
+	for(var i = 0; i < existingInsertionButtons.length; ++i){
 		existingInsertionButtons[i].classList.remove('hide');
 	}
 	//hide this button when field is in use
 	appendDataButton.classList.add('hide');
 	//hide visible fields 
 	var existingInsertionFields = dataList.getElementsByClassName('insert-input-group');
-	for(var i = 0; i < existingInsertionFields.length; i++){
+	for(var i = 0; i < existingInsertionFields.length; ++i){
 		existingInsertionFields[i].classList.add('hide');
 	}
 	//show corresponding field
@@ -229,7 +239,7 @@ appendDataButton.querySelector('button').onclick = function() {
 //**************--- HELPER FUNCTIONS ---**************
 function noVisibleInputField() {
 	var existingInsertionFields = dataList.getElementsByClassName('insert-input-group');
-	for(var i = 0; i < existingInsertionFields.length; i++){
+	for(var i = 0; i < existingInsertionFields.length; ++i){
 		if(!existingInsertionFields[i].classList.contains('hide')){
 			return false;
 		}

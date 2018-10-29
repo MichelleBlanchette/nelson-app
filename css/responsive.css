@@ -1,0 +1,50 @@
+@media (max-width: 1300px) {
+  /* line 4, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/responsive.scss */
+  #control-panel nav ul li {
+    font-size: 1.1vw; }
+  /* line 8, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/responsive.scss */
+  .pane h1 {
+    font-size: 1.5em; }
+  /* line 12, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/responsive.scss */
+  #control-panel #data-pane ol#data-list li {
+    font-size: 1.3vw; }
+  /* line 16, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/responsive.scss */
+  #control-panel #data-pane div.input-group button {
+    bottom: 0.13vw; }
+  /* line 20, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/responsive.scss */
+  #control-panel #data-pane ol#data-list li button {
+    bottom: 0.22vw;
+    padding: 0.15vw 0.65vw 0.15vw 0.5vw;
+    font-size: 1.41vw; }
+  /* line 26, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/responsive.scss */
+  #control-panel #data-pane div.insert-button-group button {
+    font-size: 1.5vw;
+    padding: 0.8vw;
+    bottom: -2px; }
+  /* line 32, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/responsive.scss */
+  #chart-panel #guide-labels {
+    width: 13%; }
+  /* line 36, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/responsive.scss */
+  #chart-panel #guide-labels text {
+    font-size: 1.2vm !important; }
+  /* line 40, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/responsive.scss */
+  #chart-panel #control-chart {
+    width: 87%; }
+  /* line 44, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/responsive.scss */
+  footer #copyright p {
+    font-size: 0.7vw; }
+  /* line 48, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/responsive.scss */
+  header #signature #author {
+    width: 7.7vw; }
+  /* line 52, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/responsive.scss */
+  header #signature #author:hover {
+    width: 15.7vw; }
+  /* line 56, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/responsive.scss */
+  header #signature #author #name {
+    font-size: 0.9vw;
+    top: 0.6vh; }
+  /* line 61, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/responsive.scss */
+  header #signature #author #website {
+    font-size: 1vw; } }
+
+/*# sourceMappingURL=../responsive.map */

@@ -200,7 +200,7 @@ function graphData(){
 		var guideOutputWidth = guideOutput.getBoundingClientRect().width;
 		for(var i = 0; i < transformedGuides.length; i++){
 			var newText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-			var styleStr = 'color:#071422;alignment-baseline:middle;text-anchor:middle;font-size:133%;';
+			var styleStr = 'color:#071422;alignment-baseline:middle;text-anchor:middle;font-size:1.2vm;';
 			//font weight
 			if(i == 3){
 				styleStr += 'font-weight:900;';

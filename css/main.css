@@ -124,34 +124,35 @@ p {
 p.note {
   font-weight: 400;
   text-transform: none;
-  line-height: 1.5; }
+  line-height: 1.5;
+  font-size: 1vw; }
 
-/* line 98, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+/* line 99, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
 a, a:link, a:focus, a:visited, a:hover {
   text-decoration: none;
   color: inherit; }
 
-/* line 103, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+/* line 104, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
 .hide {
   display: none; }
 
-/* line 107, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+/* line 108, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
 img {
   pointer-events: none; }
 
-/* line 108, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+/* line 109, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
 .clearfloat {
   clear: both !important; }
 
-/* line 110, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+/* line 111, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
 .drop-arrow {
   float: right; }
 
-/* line 113, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+/* line 114, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
 .drop-arrow.closed {
   transform: rotate(90deg); }
 
-/* line 117, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+/* line 118, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
 input[type='text'] {
   box-sizing: border-box;
   outline: none;
@@ -164,12 +165,11 @@ input[type='text'] {
   background-color: #071422;
   color: #035094; }
 
-/* line 129, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+/* line 130, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
 input[type='text']:focus {
   outline: none;
   background-color: #e8e9ec;
-  color: #071422;
-  pointer-events: none; }
+  color: #071422; }
 
 /* line 135, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
 button {
@@ -190,7 +190,7 @@ button {
   padding-top: 3px; }
 
 /* line 152, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
-button:focus, button:active {
+button:active {
   border-bottom: none;
   bottom: 0; }
 
@@ -354,7 +354,7 @@ header {
       border-top: 2px solid #0676b7;
       bottom: 4px; }
     /* line 312, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
-    #control-panel #data-pane div.input-group button:focus, #control-panel #data-pane div.input-group button:active {
+    #control-panel #data-pane div.input-group button:active {
       border-top: 7px solid #035094;
       background-color: #035094;
       bottom: -1px; }
@@ -388,7 +388,7 @@ header {
       left: 47%;
       display: none; }
     /* line 346, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
-    #control-panel #data-pane div.insert-button-group button:focus, #control-panel #data-pane div.insert-button-group button:active {
+    #control-panel #data-pane div.insert-button-group button:active {
       border: none;
       bottom: -8px;
       background-color: #e8e9ec; }
