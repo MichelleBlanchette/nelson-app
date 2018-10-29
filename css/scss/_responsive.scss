@@ -23,7 +23,6 @@
 }
 
 // Medium devices (tablets, less than 992px)
-
 $slide-left: left 1s;
 
 @media (max-width: 991.98px) {
@@ -38,6 +37,16 @@ $slide-left: left 1s;
 	
 	#author {
 		display: none;
+	}
+	
+	header {
+		#logo {
+			width: 80%;
+		}
+		#signature {
+			padding-left: 35px;
+			padding-right: 12px;
+		}
 	}
 	
 	footer span {
@@ -131,5 +140,15 @@ $slide-left: left 1s;
 		right: 0;
 		width: 100%;
 	}
+	
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+	
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
 	
 }
