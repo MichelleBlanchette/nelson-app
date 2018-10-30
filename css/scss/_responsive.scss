@@ -20,6 +20,13 @@
 		}
 	}
 	
+	#control-panel #data-pane div.input-group button:active {
+		border-top: 0.41em solid #035094;
+		padding-bottom: 0.75em;
+		background-color: #035094;
+		bottom: -0.2em;
+	}
+	
 }
 
 // Medium devices (tablets, less than 992px)
