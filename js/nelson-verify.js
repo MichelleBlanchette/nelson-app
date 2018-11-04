@@ -342,7 +342,7 @@ function resetBooleanArray(arr){
 }
 
 function displayFail(index){
-	console.log("Rule " + (index+1) + " failed.");
+//	console.log("Rule " + (index+1) + " failed.");
 	//show problematic nodes on select
 //	RuleVisibilityIcon[index].addEventListener('click', function(){
 //		graphNodes(ruleErrors[index]);
