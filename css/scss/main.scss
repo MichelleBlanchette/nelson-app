@@ -114,6 +114,12 @@ p.note {
 	font-size: 0.64em;
 }
 
+span.label {
+	font-size: 0.64em;
+    text-transform: none;
+    letter-spacing: 0.05em;
+}
+
 a, a:link, a:focus, a:visited, a:hover {
 	text-decoration: none;
 	color: inherit;
@@ -170,6 +176,7 @@ button {
 button:active {
 	border-bottom: none;
 	bottom: 0;
+	margin-bottom: 5px;
 }
 
 /**** BRANDING HEADER ****/
@@ -274,7 +281,7 @@ header {
 	height: 87.5vh;
 	float: left;
 	width: 25%;
-	overflow-y: auto;
+	overflow-y: scroll;
 	overflow-x: hidden;
 	nav {
 		padding: 0;
@@ -318,6 +325,7 @@ header {
 		}
 		div.input-group {
 			width: 100%;
+			height: 2.13em;
 			input[type='text'] {
 				border-radius: 10px 0 0 10px;
 				padding: 0.512em;
@@ -335,7 +343,7 @@ header {
 				border-top: 0.2em solid #035094;
 				padding-bottom: 0.75em;
 				background-color: #035094;
-				bottom: -0.05em;
+				bottom: -0.01em;
 			}
 		}
 		div.insert-button-group {
