@@ -15,11 +15,11 @@ var isEnoughData = false;
 
 //attach click events to control panel tabs
 for(var i = 0; i < tabs.length; ++i){
-	tabs[i].onclick = (function(value) {
+	tabs[i].addEventListener("click", (function(value) {
 		return function(){
 			showPane(value);
 		}
-	})(i);
+	})(i));
 }
 
 function showPane(num) {
