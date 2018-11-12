@@ -36,14 +36,14 @@ function showPane(num) {
 
 //attach keypress events to data input field
 inputAddField.addEventListener('keypress', function(e){
-	cleanNumericalInput(e, this);
+	numericalInputKeypressActions(e, this);
 });
 //disable paste functionality
 inputAddField.addEventListener('paste', function(e){
 	e.preventDefault();
 });
 
-function cleanNumericalInput(event, theField) {
+function numericalInputKeypressActions(event, theField) {
 	var theButton = theField.nextSibling;
 	if (event.key === 'Enter') {
 		//submit on enter
@@ -87,135 +87,153 @@ inputAddButton.addEventListener('click', function(){
 });
 	
 function addDataValue(isAppended, associatedInputField) {
-	if(associatedInputField.value != ''){
-		//final sanitization
-		////disregard negative
-		if(associatedInputField.value.charAt(0) === '-'){
-			associatedInputField.value = associatedInputField.value.replace('-', '');
-			var removedNegativeFlag = true;
-		}
-		////preceding zeros
-		associatedInputField.value = associatedInputField.value.replace(/^0+/, '');
-		if(associatedInputField.value.charAt(0) === '.'){
-			associatedInputField.value = associatedInputField.value.replace('.', '0.');
-		}
-		////unnecessary ending zeros
-		if(associatedInputField.value.includes('.')){
-			associatedInputField.value = associatedInputField.value.replace(/0+$/, '');
-		}
-		////all zeros
-		if(associatedInputField.value === '0.'){
-			associatedInputField.value = '0';
-		}
-		////ends with period
-		associatedInputField.value = associatedInputField.value.replace(/\.$/, '');
-		////invalid input
-		if(associatedInputField.value == ''){
-			associatedInputField.value = '0';
-		}
-		////put back negative sign that was disregarded
-		if(removedNegativeFlag){
-			associatedInputField.value = '-' + associatedInputField.value;
-		}
-		/////////////////////////////////////////////////////
-		//create insertion button before <li>
-		//create insertion button
-		var insertNode = document.createElement('div');
-		insertNode.innerHTML = '<button>+</button><hr />';
-		insertNode.classList.add('insert-button-group');
-		//create insertion field
-		var insertFieldGroup = document.createElement('div');
-		insertFieldGroup.innerHTML = '<input type="text" maxlength="10" /><button class="data-insert">Insert</button>';
-		insertFieldGroup.classList.add('input-group');
-		insertFieldGroup.classList.add('insert-input-group');
-		insertFieldGroup.classList.add('hide');
-		//attach insertion method
-		insertNode.querySelector('button').onclick = function() {
-			//show all buttons
-			var existingInsertionButtons = dataList.getElementsByClassName('insert-button-group');
-			for(var i = 0; i < existingInsertionButtons.length; i++){
-				existingInsertionButtons[i].classList.remove('hide');
-			}
-			//hide this button when field is in use
-			insertNode.classList.add('hide');
-			//hide visible fields 
-			var existingInsertionFields = dataList.getElementsByClassName('insert-input-group');
-			for(var i = 0; i < existingInsertionFields.length; i++){
-				existingInsertionFields[i].classList.add('hide');
-			}
-			inputAddGroup.classList.add('hide');
-			//show append button
-			appendDataButton.classList.remove('hide');
-			//show corresponding field
-			insertFieldGroup.classList.remove('hide');
-		}
-		//create <li> child with value and append to <ul>
-		var liNode = document.createElement('li');
-		liNode.innerHTML = associatedInputField.value + '<button>&ndash;</button>';
-		//add elements to data list
-		if(isAppended){
-			dataList.appendChild(insertNode);
-			dataList.appendChild(insertFieldGroup);
-			dataList.appendChild(liNode);
-		} else {
-			dataList.insertBefore(liNode, associatedInputField.parentNode.previousSibling);
-			dataList.insertBefore(insertFieldGroup, liNode);
-			dataList.insertBefore(insertNode, insertFieldGroup);
-		}
-		//reset
-		associatedInputField.value = '';
-		inputAddField.focus();
-		//added <li>, so hide message
-		noDataNote.classList.add('hide');
-		//toggle if enough data values
-		if(!isEnoughData && dataList.getElementsByTagName('li').length >= 15){
-			isEnoughData = true;
-			unmetConditionNote.classList.add('hide');
-			tabs[0].style.color = '#0676b7';
-		}
-		//attach removal method to button
-		liNode.querySelector('button').onclick = function() {
-			//remove this <li>
-			dataList.removeChild(liNode);
-			//remove corresponding insertion groups
-			dataList.removeChild(insertNode);
-			dataList.removeChild(insertFieldGroup);
-			//check counts for proper message displaying
-			var liCount = dataList.getElementsByTagName('li').length;
-			//there is no data
-			if(liCount == 0) {
-				noDataNote.classList.remove('hide');
-			}
-			if(noVisibleInputField()) {
-				//ensure data input is visible when no insertion available
-				appendDataButton.classList.add('hide');
-				inputAddGroup.classList.remove('hide');
-			}
-			//there is less than 15 data
-			if(liCount < 15) {
-				isEnoughData = false;
-				unmetConditionNote.classList.remove('hide');
-				tabs[0].style.color = '#d9364c';
-			}
-			//data has been edited
-			graphData();
-		}
-		//******************************
-		//insertion functionality
-		insertFieldGroup.querySelector('button').addEventListener('click', function() {
-			addDataValue(false, insertFieldGroup.querySelector('input'));
-			graphData();
-		});
-		//data sanitization
-		insertFieldGroup.querySelector('input').addEventListener('keypress', function(e){
-			cleanNumericalInput(e, this);
-		});
-		//disable paste functionality
-		insertFieldGroup.querySelector('input').addEventListener('paste', function(e){
-			e.preventDefault();
-		});
-		//******************************
+	
+	var inputDataValue = associatedInputField.value;
+
+	// exit if no value exists /////////////
+	if(inputDataValue == ''){ 
+		alert("No data was entered.");
+		return;
 	}
+	////////////////////////////////////////
+	
+	// security sanitization
+	const m = inputDataValue.match(/^\-*[0-9]+\.*[0-9]*/);
+	if( m == null || m[0].length != inputDataValue.length ) {
+		alert("The data value [ " + inputDataValue + " ] is not an accepted number format. The value was not submitted.");
+		return;
+	}
+	
+	//final sanitization
+	////disregard negative
+	if(inputDataValue.charAt(0) === '-'){
+		inputDataValue = inputDataValue.replace('-', '');
+		var removedNegativeFlag = true;
+	}
+	////preceding zeros
+	inputDataValue = inputDataValue.replace(/^0+/, '');
+	if(inputDataValue.charAt(0) === '.'){
+		inputDataValue = inputDataValue.replace('.', '0.');
+	}
+	////unnecessary ending zeros
+	if(inputDataValue.includes('.')){
+		inputDataValue = inputDataValue.replace(/0+$/, '');
+	}
+	////ends with period
+	inputDataValue = inputDataValue.replace(/\.$/, '');
+	////invalid input
+	if(inputDataValue == ''){
+		inputDataValue = '0';
+	}
+	////put back negative sign that was disregarded
+	if(removedNegativeFlag){
+		inputDataValue = '-' + inputDataValue;
+	}
+	
+	// ensure data is an accepted length
+	if((inputDataValue.charAt(0) !== '-' && inputDataValue.length > 10) || (inputDataValue.charAt(0) === '-' && inputDataValue.length > 11)) {
+		alert("The data value [ " + inputDataValue + " ] exceeds the character limit of 10 (excluding the negative sign). The value was not submitted.");
+		return;
+	}
+	
+	/////////////////////////////////////////////////////
+	//create insertion button before <li>
+	//create insertion button
+	var insertNode = document.createElement('div');
+	insertNode.innerHTML = '<button>+</button><hr />';
+	insertNode.classList.add('insert-button-group');
+	//create insertion field
+	var insertFieldGroup = document.createElement('div');
+	insertFieldGroup.innerHTML = '<input type="text" maxlength="10" /><button class="data-insert">Insert</button>';
+	insertFieldGroup.classList.add('input-group');
+	insertFieldGroup.classList.add('insert-input-group');
+	insertFieldGroup.classList.add('hide');
+	//attach insertion method
+	insertNode.querySelector('button').onclick = function() {
+		//show all buttons
+		var existingInsertionButtons = dataList.getElementsByClassName('insert-button-group');
+		for(var i = 0; i < existingInsertionButtons.length; i++){
+			existingInsertionButtons[i].classList.remove('hide');
+		}
+		//hide this button when field is in use
+		insertNode.classList.add('hide');
+		//hide visible fields 
+		var existingInsertionFields = dataList.getElementsByClassName('insert-input-group');
+		for(var i = 0; i < existingInsertionFields.length; i++){
+			existingInsertionFields[i].classList.add('hide');
+		}
+		inputAddGroup.classList.add('hide');
+		//show append button
+		appendDataButton.classList.remove('hide');
+		//show corresponding field
+		insertFieldGroup.classList.remove('hide');
+	}
+	//create <li> child with value and append to <ul>
+	var liNode = document.createElement('li');
+	liNode.innerHTML = inputDataValue + '<button>&ndash;</button>';
+	//add elements to data list
+	if(isAppended){
+		dataList.appendChild(insertNode);
+		dataList.appendChild(insertFieldGroup);
+		dataList.appendChild(liNode);
+	} else {
+		dataList.insertBefore(liNode, associatedInputField.parentNode.previousSibling);
+		dataList.insertBefore(insertFieldGroup, liNode);
+		dataList.insertBefore(insertNode, insertFieldGroup);
+	}
+	//reset
+	associatedInputField.value = '';
+	inputAddField.focus();
+	//added <li>, so hide message
+	noDataNote.classList.add('hide');
+	//communicate if enough data values
+	if(!isEnoughData && dataList.getElementsByTagName('li').length >= 15){
+		isEnoughData = true;
+		unmetConditionNote.classList.add('hide');
+		tabs[0].style.color = '#0676b7';
+	}
+	//attach removal method to button
+	liNode.querySelector('button').onclick = function() {
+		//remove this <li>
+		dataList.removeChild(liNode);
+		//remove corresponding insertion groups
+		dataList.removeChild(insertNode);
+		dataList.removeChild(insertFieldGroup);
+		//check counts for proper message displaying
+		var liCount = dataList.getElementsByTagName('li').length;
+		//there is no data
+		if(liCount == 0) {
+			noDataNote.classList.remove('hide');
+		}
+		if(noVisibleInputField()) {
+			//ensure data input is visible when no insertion available
+			appendDataButton.classList.add('hide');
+			inputAddGroup.classList.remove('hide');
+		}
+		//there is less than 15 data
+		if(liCount < 15) {
+			isEnoughData = false;
+			unmetConditionNote.classList.remove('hide');
+			tabs[0].style.color = '#d9364c';
+		}
+		//data has been edited
+		graphData();
+	}
+	//******************************
+	//insertion functionality
+	insertFieldGroup.querySelector('button').addEventListener('click', function() {
+		addDataValue(false, insertFieldGroup.querySelector('input'));
+		graphData();
+	});
+	//data sanitization
+	insertFieldGroup.querySelector('input').addEventListener('keypress', function(e){
+		numericalInputKeypressActions(e, this);
+	});
+	//disable paste functionality
+	insertFieldGroup.querySelector('input').addEventListener('paste', function(e){
+		e.preventDefault();
+	});
+	//******************************
 }
 
 //attach click event to append button
