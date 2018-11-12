@@ -98,7 +98,7 @@ function addDataValue(isAppended, associatedInputField) {
 	////////////////////////////////////////
 	
 	// security sanitization
-	const m = inputDataValue.match(/^\-*[0-9]+\.*[0-9]*/);
+	const m = inputDataValue.match(/^\-{0,1}[0-9]*\.{0,1}[0-9]*/);
 	if( m == null || m[0].length != inputDataValue.length ) {
 		alert("The data value [ " + inputDataValue + " ] is not an accepted number format. The value was not submitted.");
 		return;
@@ -126,8 +126,10 @@ function addDataValue(isAppended, associatedInputField) {
 		inputDataValue = '0';
 	}
 	////put back negative sign that was disregarded
-	if(removedNegativeFlag){
+	if(removedNegativeFlag && inputDataValue != '0'){
 		inputDataValue = '-' + inputDataValue;
+	} else if(removedNegativeFlag && inputDataValue == '0') {
+		inputDataValue == '0';
 	}
 	
 	// ensure data is an accepted length

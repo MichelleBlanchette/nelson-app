@@ -9,7 +9,6 @@ tabs[2].addEventListener("click", function() {
 	shareURL = window.location.href + "?data=";
 	var dataCollection = dataList.querySelectorAll('li');
 	var dataCSV = "";
-	alert(dataCollection.length);
 	for(var i = 0; i < dataCollection.length; ++i) {
 		dataCSV += dataCollection[i].firstChild.textContent;
 		if( i < dataCollection.length - 1) {
