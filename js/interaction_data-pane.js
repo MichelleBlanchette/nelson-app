@@ -101,6 +101,7 @@ function addDataValue(isAppended, associatedInputField) {
 	const m = inputDataValue.match(/^\-{0,1}[0-9]*\.{0,1}[0-9]*/);
 	if( m == null || m[0].length != inputDataValue.length ) {
 		alert("The data value [ " + inputDataValue + " ] is not an accepted number format. The value was not submitted.");
+		associatedInputField.value = '';
 		return;
 	}
 	
@@ -135,6 +136,7 @@ function addDataValue(isAppended, associatedInputField) {
 	// ensure data is an accepted length
 	if((inputDataValue.charAt(0) !== '-' && inputDataValue.length > 10) || (inputDataValue.charAt(0) === '-' && inputDataValue.length > 11)) {
 		alert("The data value [ " + inputDataValue + " ] exceeds the character limit of 10 (excluding the negative sign). The value was not submitted.");
+		associatedInputField.value = '';
 		return;
 	}
 	
@@ -254,6 +256,16 @@ appendDataButton.querySelector('button').onclick = function() {
 	}
 	//show corresponding field
 	inputAddGroup.classList.remove('hide');
+}
+
+// GET csv data
+var GETdata = window.location.href.match(/[?&]+data=([^&]*)/i);
+if( GETdata != null ) {
+	GETdata = GETdata[1].split(',');
+	for( var i = 0; i < GETdata.length; ++i ) {
+		inputAddField.value = GETdata[i];
+		addDataValue(true, inputAddField);
+	}
 }
 
 //**************--- HELPER FUNCTIONS ---**************
