@@ -481,16 +481,16 @@ header {
 	width: 75%;
 	#guide-labels {
 		width: 10%;
-		height: calc(87.5vh - 300px);
-		padding: 150px 0;
+		height: calc(87.5vh - 100px);
+		padding: 50px 0;
 		background-color: $grey;
 		float: left;
 		font-size: 0.64em;
 	}
 	#control-chart {
 		width: 80%;
-		height: calc(87.5vh - 300px);
-		padding: 150px 0;
+		height: calc(87.5vh - 100px);
+		padding: 50px 0;
 		background-color: $white;
 		float: left;
 		

@@ -20,7 +20,7 @@ function graphData(){
 	
 	cw = canvas.getBoundingClientRect().width;
 	//subtract added padding from height...
-	ch = canvas.getBoundingClientRect().height - 300;
+	ch = canvas.getBoundingClientRect().height - 100;
 
 	//It's about to go down. Prepare yo'self!
 	var error = false;
@@ -98,7 +98,7 @@ function graphData(){
 		clearOutput();
 		
 		//Find farthest distance for scale factor...
-		var maxDist = 3*sigma;
+		var maxDist = 3 * sigma;
 		var dist, maxDist_Index;
 		for(var i = 0; i < data.length; i++){
 			dist = (data[i] > xbar) ? (data[i] - xbar) : (xbar - data[i]);
@@ -111,7 +111,8 @@ function graphData(){
 		
 		//Calculate scale factor...
 		//maxDist is half of the graph height since xbar is centered and it is the max distance from xbar
-		var scaleFactor = ch / (maxDist*2);
+		//added extra spacing to prevent drawing cut off
+		var scaleFactor = ch / ((maxDist*2) + (maxDist*0.1));
 		
 		//Apply scaling to data...
 		transformedData = new Array(data.length);

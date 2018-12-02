@@ -522,16 +522,16 @@ header {
   /* line 482, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
   #chart-panel #guide-labels {
     width: 10%;
-    height: calc(87.5vh - 300px);
-    padding: 150px 0;
+    height: calc(87.5vh - 100px);
+    padding: 50px 0;
     background-color: #d6d7da;
     float: left;
     font-size: 0.64em; }
   /* line 490, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
   #chart-panel #control-chart {
     width: 80%;
-    height: calc(87.5vh - 300px);
-    padding: 150px 0;
+    height: calc(87.5vh - 100px);
+    padding: 50px 0;
     background-color: #e8e9ec;
     float: left; }
     /* line 498, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
