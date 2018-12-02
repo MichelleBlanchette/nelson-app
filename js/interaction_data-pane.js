@@ -85,6 +85,19 @@ inputAddButton.addEventListener('click', function(){
 	addDataValue(true, inputAddField);
 	graphData();
 });
+
+// GET csv data
+document.addEventListener("DOMContentLoaded", function(event) {
+	var GETdata = window.location.href.match(/[?&]+data=([^&]*)/i);
+	if( GETdata != null ) {
+		GETdata = GETdata[1].split(',');
+		for( var i = 0; i < GETdata.length; ++i ) {
+			inputAddField.value = GETdata[i];
+			addDataValue(true, inputAddField);
+			graphData();
+		}
+	}	
+});
 	
 function addDataValue(isAppended, associatedInputField) {
 	
@@ -256,16 +269,6 @@ appendDataButton.querySelector('button').onclick = function() {
 	}
 	//show corresponding field
 	inputAddGroup.classList.remove('hide');
-}
-
-// GET csv data
-var GETdata = window.location.href.match(/[?&]+data=([^&]*)/i);
-if( GETdata != null ) {
-	GETdata = GETdata[1].split(',');
-	for( var i = 0; i < GETdata.length; ++i ) {
-		inputAddField.value = GETdata[i];
-		addDataValue(true, inputAddField);
-	}
 }
 
 //**************--- HELPER FUNCTIONS ---**************

@@ -13,7 +13,7 @@ window.onresize = function() {
 //Attach main function to execute button...
 inputAddButton.addEventListener('click', graphData);
 function graphData(){
-
+	
 	var dataLiNodes = dataList.querySelectorAll('li');
 	
 	/////////////////////////////
