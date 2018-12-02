@@ -27,6 +27,13 @@
 		bottom: -0.2em;
 	}
 	
+	#control-panel #options-pane {
+		button#share-button {
+			bottom: 0;
+			padding: 0.5em 0.84em;
+		}
+	}
+	
 }
 
 // Medium devices (tablets, less than 992px)
