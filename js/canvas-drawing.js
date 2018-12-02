@@ -4,14 +4,9 @@ var cw, ch;
 var transformedData, data, transformedGuides, guides, xDist, xbar, sigma;
 var falseErrors;
 
-window.onresize = function() {
-	//Hide after resizing because dimensions will be incorrect
-	canvas.classList.add('hide');
-	//TODO--Notify resizing occurred and to click here to reload control chart
-}
+// Refresh graph because of dimension changes
+window.onresize = graphData;
 
-//Attach main function to execute button...
-inputAddButton.addEventListener('click', graphData);
 function graphData(){
 	
 	var dataLiNodes = dataList.querySelectorAll('li');
