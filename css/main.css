@@ -682,7 +682,7 @@ footer #copyright span {
     overflow-y: hidden; }
   /* line 122, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
   #chart-panel svg {
-    height: calc(87.5vh - 300px - 16px); }
+    height: calc(87.5vh - 100px - 15px) !important; }
   /* line 126, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/_responsive.scss */
   #chart-panel #guide-labels {
     position: fixed;
