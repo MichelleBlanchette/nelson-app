@@ -4,9 +4,6 @@ var cw, ch;
 var transformedData, data, transformedGuides, guides, xDist, xbar, sigma;
 var falseErrors;
 
-// Refresh graph because of dimension changes
-window.onresize = graphData;
-
 function graphData(){
 	
 	var dataLiNodes = dataList.querySelectorAll('li');
