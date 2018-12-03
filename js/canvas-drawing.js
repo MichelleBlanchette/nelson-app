@@ -254,7 +254,7 @@ function graphData(){
 			RuleVisibilityIcon[j].innerHTML = 'visibility_off';
 		}
 		
-		alert('An error has occurred. The control chart remains hidden.');
+		alert('An error has occurred. The control chart could not be drawn.');
 	}
 	
 }
