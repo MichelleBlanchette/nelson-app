@@ -209,19 +209,35 @@ function graphData(){
 		
 		//Data is ready for Nelson Rule Verification
 		verifyNelsonRules(data);
+	
+	}
+
+	//Display canvas upon successful completion and complete other tasks
+	if(!error){
+		canvas.classList.remove('hide');
 		
-		//Rules pane heading reflects if Fails exist
+		// Rules pane heading reflect if Fails exist
 		if(failedRuleCount > 0) {
 			tabs[1].style.color = '#d9364c';
 		} else {
 			tabs[1].style.color = '#0676b7';
 		}
+		
+		// check for toggled rule visibility
+		var errorIndex = null;
 	
-	}
-
-	//Display canvas upon successful completion...
-	if(!error){
-		canvas.classList.remove('hide');
+		for(var i = 0; i < RuleHeader.length; ++i){
+			if(RuleVisibilityIcon[i].classList.contains('active')) {
+				errorIndex = i;
+				break;
+			}
+		}
+		
+		// keep showing visible rule
+		if(errorIndex !== null) {
+			graphNodes(ruleErrors[errorIndex]);
+		}
+		
 	} else {
 		canvas.classList.add('hide');
 		alert('An error has occurred. The control chart remains hidden.');
@@ -266,3 +282,6 @@ function clearOutput(){
 	document.getElementById('guide-labels').innerHTML = '';
 	//CLEAR NELSON RULE OUTPUT DATA
 }
+
+// Refresh graph because of dimension changes
+window.addEventListener("resize", graphData);

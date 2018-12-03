@@ -48,27 +48,7 @@ for(var i = 0; i < RuleHeader.length; ++i){
 	
 }
 
-// Refresh graph because of dimension changes
-window.addEventListener("resize", function() {
-	
-	var errorIndex = null;
-	
-	for(var i = 0; i < RuleHeader.length; ++i){
-		if(RuleVisibilityIcon[i].classList.contains('active')) {
-			errorIndex = i;
-			break;
-		}
-	}
-	
-	graphData();
-	
-	// keep showing fails that were visible
-	if(errorIndex !== null) {
-		graphNodes(ruleErrors[errorIndex]);
-	}
-	
-});
-
+// Description dropdown functionality
 function toggleDropdown(index) {
 	RuleDropContent[index].classList.toggle('hide');
 	RuleDropArrow[index].classList.toggle('closed');
