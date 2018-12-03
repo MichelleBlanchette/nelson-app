@@ -338,7 +338,7 @@ function endRule(number){
 }
 
 function resetBooleanArray(arr){
-	for(var i = 0; i < arr.length; i++){
+	for(var i = 0; i < arr.length; ++i){
 		arr[i] = false;
 	}
 }
@@ -365,5 +365,12 @@ function displayPass(index){
 	RuleStatus[index].style.color = "#01b4c9";
 	RuleStatus[index].innerHTML = "Pass";
 	//on pass, hide error feedback
+	RuleErrorFeedback[index].classList.add('hide');
+}
+
+function displayReset(index) {
+	//clear rule status
+	RuleStatus[index].innerHTML = "";
+	//hide error feedback
 	RuleErrorFeedback[index].classList.add('hide');
 }

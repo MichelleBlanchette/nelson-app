@@ -12,6 +12,11 @@ function graphData(){
 	if(dataLiNodes.length < 15){
 		//ensure graph is clear--not enough data for output
 		clearOutput();
+		// disable all visibility toggles because nothing to view
+		for(var j = 0; j < RuleVisibilityIcon.length; ++j){
+			RuleVisibilityIcon[j].classList.replace('active', 'inactive');
+			RuleVisibilityIcon[j].innerHTML = 'visibility_off';
+		}
 		return;
 	}////////////////////////////
 	
@@ -214,6 +219,7 @@ function graphData(){
 
 	//Display canvas upon successful completion and complete other tasks
 	if(!error){
+		
 		canvas.classList.remove('hide');
 		
 		// Rules pane heading reflect if Fails exist
@@ -239,7 +245,15 @@ function graphData(){
 		}
 		
 	} else {
+		
 		canvas.classList.add('hide');
+		
+		// disable all visibility toggles because nothing to view
+		for(var j = 0; j < RuleVisibilityIcon.length; ++j){
+			RuleVisibilityIcon[j].classList.replace('active', 'inactive');
+			RuleVisibilityIcon[j].innerHTML = 'visibility_off';
+		}
+		
 		alert('An error has occurred. The control chart remains hidden.');
 	}
 	
@@ -276,11 +290,13 @@ function newBooleanArray(length){
 }
 
 function clearOutput(){
+	// clear svg chart
 	document.getElementById('chart-guides').innerHTML = '';
 	document.getElementById('chart-line').innerHTML = '';
 	document.getElementById('chart-nodes').innerHTML = '';
 	document.getElementById('guide-labels').innerHTML = '';
-	//CLEAR NELSON RULE OUTPUT DATA
+	// clear nelson output
+	resetAllRuleOutputs();
 }
 
 // Refresh graph because of dimension changes

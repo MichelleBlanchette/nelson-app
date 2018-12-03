@@ -53,3 +53,11 @@ function toggleDropdown(index) {
 	RuleDropContent[index].classList.toggle('hide');
 	RuleDropArrow[index].classList.toggle('closed');
 }
+
+function resetAllRuleOutputs() {
+	for(var i = 0; i < RuleStatus.length; ++i) {
+		displayReset(i);
+	}
+	// re-initialize rules pane tab color
+	tabs[1].style.color = '#0676b7';
+}
