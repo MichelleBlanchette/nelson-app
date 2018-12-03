@@ -526,17 +526,20 @@ header {
     border-radius: 0 5px 5px 0;
     margin-bottom: 0; }
   /* line 489, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+  #control-panel #options-pane button#share-button:active {
+    background-color: #035094; }
+  /* line 492, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
   #control-panel #options-pane p.note {
     margin-top: 0.84em;
     text-align: center; }
 
 /**** RIGHT CHARTING PANEL ****/
-/* line 497, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+/* line 500, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
 #chart-panel {
   height: 87.5vh;
   float: left;
   width: 75%; }
-  /* line 501, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+  /* line 504, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
   #chart-panel #guide-labels {
     width: 10%;
     height: calc(87.5vh - 100px);
@@ -544,20 +547,20 @@ header {
     background-color: #d6d7da;
     float: left;
     font-size: 0.64em; }
-  /* line 509, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+  /* line 512, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
   #chart-panel #control-chart {
     width: 80%;
     height: calc(87.5vh - 100px);
     padding: 50px 0;
     background-color: #e8e9ec;
     float: left; }
-    /* line 517, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+    /* line 520, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
     #chart-panel #control-chart #chart-nodes circle {
       fill: #0676b7; }
-    /* line 520, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+    /* line 523, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
     #chart-panel #control-chart #chart-nodes circle.error {
       fill: #d9364c; }
-    /* line 523, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+    /* line 526, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
     #chart-panel #control-chart #chart-nodes circle.pulse {
       fill: #e8e9ec;
       fill-opacity: 0;
@@ -575,20 +578,20 @@ header {
     stroke-opacity: 0; } }
 
 /**** FOOTER ****/
-/* line 548, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+/* line 551, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
 footer div {
   height: 3vh;
   width: 20%;
   float: left; }
 
-/* line 554, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+/* line 557, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
 footer #copyright p {
   text-align: center;
   line-height: 3vh;
   font-size: 0.512em;
   height: inherit; }
 
-/* line 560, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
+/* line 563, /Users/michelle/Creative/Web-Development/PROJECTS/nelson-rules/css/scss/main.scss */
 footer #copyright span {
   text-transform: capitalize;
   font-weight: 400; }

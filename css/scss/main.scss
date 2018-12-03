@@ -486,6 +486,9 @@ header {
 			border-radius: 0 5px 5px 0;
 			margin-bottom: 0;
 		}
+		button#share-button:active {
+			background-color: $secondary;
+		}
 		p.note {
 			margin-top: 0.84em;
 			text-align: center;
