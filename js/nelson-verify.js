@@ -1,7 +1,8 @@
-var errorAt, ruleErrors, failedRule;
+var errorAt, ruleErrors, failedRule, failedRuleCount;
 
 function verifyNelsonRules(data){
 
+	failedRuleCount = 0;
 	failedRule = false;
 	ruleErrors = [];
 	errorAt = new Array(data.length);
@@ -325,6 +326,7 @@ function endRule(number){
 	if(failedRule){
 		ruleErrors.push(errorAt.slice());
 		displayFail(index);
+		++failedRuleCount;
 	} else {
 		//still need to push errors for index purposes and logging
 		ruleErrors.push(errorAt.slice());

@@ -62,6 +62,7 @@ window.addEventListener("resize", function() {
 	
 	graphData();
 	
+	// keep showing fails that were visible
 	if(errorIndex !== null) {
 		graphNodes(ruleErrors[errorIndex]);
 	}

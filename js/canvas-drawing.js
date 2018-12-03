@@ -209,6 +209,13 @@ function graphData(){
 		
 		//Data is ready for Nelson Rule Verification
 		verifyNelsonRules(data);
+		
+		//Rules pane heading reflects if Fails exist
+		if(failedRuleCount > 0) {
+			tabs[1].style.color = '#d9364c';
+		} else {
+			tabs[1].style.color = '#0676b7';
+		}
 	
 	}
 
