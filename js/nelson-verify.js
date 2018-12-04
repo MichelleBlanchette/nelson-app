@@ -1,7 +1,8 @@
-var errorAt, ruleErrors, failedRule;
+var errorAt, ruleErrors, failedRule, failedRuleCount;
 
 function verifyNelsonRules(data){
 
+	failedRuleCount = 0;
 	failedRule = false;
 	ruleErrors = [];
 	errorAt = new Array(data.length);
@@ -325,6 +326,7 @@ function endRule(number){
 	if(failedRule){
 		ruleErrors.push(errorAt.slice());
 		displayFail(index);
+		++failedRuleCount;
 	} else {
 		//still need to push errors for index purposes and logging
 		ruleErrors.push(errorAt.slice());
@@ -336,7 +338,7 @@ function endRule(number){
 }
 
 function resetBooleanArray(arr){
-	for(var i = 0; i < arr.length; i++){
+	for(var i = 0; i < arr.length; ++i){
 		arr[i] = false;
 	}
 }
@@ -363,5 +365,12 @@ function displayPass(index){
 	RuleStatus[index].style.color = "#01b4c9";
 	RuleStatus[index].innerHTML = "Pass";
 	//on pass, hide error feedback
+	RuleErrorFeedback[index].classList.add('hide');
+}
+
+function displayReset(index) {
+	//clear rule status
+	RuleStatus[index].innerHTML = "";
+	//hide error feedback
 	RuleErrorFeedback[index].classList.add('hide');
 }

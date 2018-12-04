@@ -27,6 +27,13 @@
 		bottom: -0.2em;
 	}
 	
+	#control-panel #options-pane {
+		button#share-button {
+			bottom: 0;
+			padding: 0.5em 0.84em;
+		}
+	}
+	
 }
 
 // Medium devices (tablets, less than 992px)
@@ -113,7 +120,7 @@ $slide-left: left 0.7s;
 	}
 	
 	#chart-panel svg {
-		height: calc(87.5vh - 300px - 16px);
+		height: calc(87.5vh - 100px - 15px) !important;
 	}
 	
 	#chart-panel #guide-labels {

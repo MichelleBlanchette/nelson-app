@@ -4,14 +4,6 @@ var cw, ch;
 var transformedData, data, transformedGuides, guides, xDist, xbar, sigma;
 var falseErrors;
 
-window.onresize = function() {
-	//Hide after resizing because dimensions will be incorrect
-	canvas.classList.add('hide');
-	//TODO--Notify resizing occurred and to click here to reload control chart
-}
-
-//Attach main function to execute button...
-inputAddButton.addEventListener('click', graphData);
 function graphData(){
 	
 	var dataLiNodes = dataList.querySelectorAll('li');
@@ -20,12 +12,17 @@ function graphData(){
 	if(dataLiNodes.length < 15){
 		//ensure graph is clear--not enough data for output
 		clearOutput();
+		// disable all visibility toggles because nothing to view
+		for(var j = 0; j < RuleVisibilityIcon.length; ++j){
+			RuleVisibilityIcon[j].classList.replace('active', 'inactive');
+			RuleVisibilityIcon[j].innerHTML = 'visibility_off';
+		}
 		return;
 	}////////////////////////////
 	
 	cw = canvas.getBoundingClientRect().width;
 	//subtract added padding from height...
-	ch = canvas.getBoundingClientRect().height - 300;
+	ch = canvas.getBoundingClientRect().height - 100;
 
 	//It's about to go down. Prepare yo'self!
 	var error = false;
@@ -103,7 +100,7 @@ function graphData(){
 		clearOutput();
 		
 		//Find farthest distance for scale factor...
-		var maxDist = 3*sigma;
+		var maxDist = 3 * sigma;
 		var dist, maxDist_Index;
 		for(var i = 0; i < data.length; i++){
 			dist = (data[i] > xbar) ? (data[i] - xbar) : (xbar - data[i]);
@@ -116,7 +113,8 @@ function graphData(){
 		
 		//Calculate scale factor...
 		//maxDist is half of the graph height since xbar is centered and it is the max distance from xbar
-		var scaleFactor = ch / (maxDist*2);
+		//added extra spacing to prevent drawing cut off
+		var scaleFactor = ch / ((maxDist*2) + (maxDist*0.1));
 		
 		//Apply scaling to data...
 		transformedData = new Array(data.length);
@@ -219,12 +217,44 @@ function graphData(){
 	
 	}
 
-	//Display canvas upon successful completion...
+	//Display canvas upon successful completion and complete other tasks
 	if(!error){
+		
 		canvas.classList.remove('hide');
+		
+		// Rules pane heading reflect if Fails exist
+		if(failedRuleCount > 0) {
+			tabs[1].style.color = '#d9364c';
+		} else {
+			tabs[1].style.color = '#0676b7';
+		}
+		
+		// check for toggled rule visibility
+		var errorIndex = null;
+	
+		for(var i = 0; i < RuleHeader.length; ++i){
+			if(RuleVisibilityIcon[i].classList.contains('active')) {
+				errorIndex = i;
+				break;
+			}
+		}
+		
+		// keep showing visible rule
+		if(errorIndex !== null) {
+			graphNodes(ruleErrors[errorIndex]);
+		}
+		
 	} else {
+		
 		canvas.classList.add('hide');
-		alert('An error has occurred. The control chart remains hidden.');
+		
+		// disable all visibility toggles because nothing to view
+		for(var j = 0; j < RuleVisibilityIcon.length; ++j){
+			RuleVisibilityIcon[j].classList.replace('active', 'inactive');
+			RuleVisibilityIcon[j].innerHTML = 'visibility_off';
+		}
+		
+		alert('An error has occurred. The control chart could not be drawn.');
 	}
 	
 }
@@ -260,9 +290,14 @@ function newBooleanArray(length){
 }
 
 function clearOutput(){
+	// clear svg chart
 	document.getElementById('chart-guides').innerHTML = '';
 	document.getElementById('chart-line').innerHTML = '';
 	document.getElementById('chart-nodes').innerHTML = '';
 	document.getElementById('guide-labels').innerHTML = '';
-	//CLEAR NELSON RULE OUTPUT DATA
+	// clear nelson output
+	resetAllRuleOutputs();
 }
+
+// Refresh graph because of dimension changes
+window.addEventListener("resize", graphData);

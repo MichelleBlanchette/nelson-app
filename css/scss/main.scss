@@ -472,6 +472,28 @@ header {
 			}
 		}
 	}
+	#options-pane {
+		input#share-link {
+			border: 2px solid #0676b7;
+			padding: 0.317em 0.64em;
+			width: calc(100% - 14em);
+		}
+		button#share-button {
+			font-size: 0.64em;
+			border: none;
+			bottom: 1px;
+			padding: 0.43em 0.84em;
+			border-radius: 0 5px 5px 0;
+			margin-bottom: 0;
+		}
+		button#share-button:active {
+			background-color: $secondary;
+		}
+		p.note {
+			margin-top: 0.84em;
+			text-align: center;
+		}
+	}
 }
 
 /**** RIGHT CHARTING PANEL ****/
@@ -481,16 +503,16 @@ header {
 	width: 75%;
 	#guide-labels {
 		width: 10%;
-		height: calc(87.5vh - 300px);
-		padding: 150px 0;
+		height: calc(87.5vh - 100px);
+		padding: 50px 0;
 		background-color: $grey;
 		float: left;
 		font-size: 0.64em;
 	}
 	#control-chart {
 		width: 80%;
-		height: calc(87.5vh - 300px);
-		padding: 150px 0;
+		height: calc(87.5vh - 100px);
+		padding: 50px 0;
 		background-color: $white;
 		float: left;
 		
